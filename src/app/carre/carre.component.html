@@ -1,13 +1,12 @@
-<div class="carre ">
-  <div class="flex" >
-  <app-carre-orange (color)="addColor($event)" ></app-carre-orange>
-  <app-carre-vert></app-carre-vert>
-  </div>
-  <ul>
-    <li *ngFor="let item of items">{{item}}</li>
-  </ul>
-  <div class="flex">
-  <app-carre-bleu></app-carre-bleu>
-  <app-carre-jaune></app-carre-jaune>
+<div class="padding">
+  <div class="carre ">
+    <div class="flex" >
+      <app-carre-orange (color)="addColor($event)" ></app-carre-orange>
+      <app-carre-vert (color)="addColor($event)"></app-carre-vert>
+    </div>
+    <div class="flex">
+      <app-carre-bleu (color)="addColor($event)"></app-carre-bleu>
+      <app-carre-jaune (color)="addColor($event)"></app-carre-jaune>
+    </div>
   </div>
 </div>

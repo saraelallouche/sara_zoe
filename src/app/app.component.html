@@ -1,5 +1,9 @@
+<div class="size" [ngClass]="couleur">
+
 <app-header></app-header>
 
-<app-carre  ></app-carre>
+<app-carre (color)="changeColor($event)" ></app-carre>
 
 <app-footer></app-footer>
+
+</div>
