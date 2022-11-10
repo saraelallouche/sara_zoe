@@ -1,8 +1,11 @@
 <div class="carre ">
   <div class="flex" >
-  <app-carre-orange></app-carre-orange>
+  <app-carre-orange (color)="addColor($event)" ></app-carre-orange>
   <app-carre-vert></app-carre-vert>
   </div>
+  <ul>
+    <li *ngFor="let item of items">{{item}}</li>
+  </ul>
   <div class="flex">
   <app-carre-bleu></app-carre-bleu>
   <app-carre-jaune></app-carre-jaune>

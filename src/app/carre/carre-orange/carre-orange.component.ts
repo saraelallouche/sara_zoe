@@ -1,4 +1,4 @@
-import {Component, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-carre-orange',
@@ -7,7 +7,7 @@ import {Component, OnInit, Output} from '@angular/core';
 })
 export class CarreOrangeComponent implements OnInit {
 
-  @Output() color: string | undefined ;
+  @Output() color:EventEmitter<string> = new EventEmitter<string>();
 
 
   constructor() { }
@@ -16,7 +16,7 @@ export class CarreOrangeComponent implements OnInit {
   }
 
   public changeColor(){
-    this.color = "orange";
+    this.color.emit("orange");
   }
 
 }
